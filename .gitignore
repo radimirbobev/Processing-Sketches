@@ -1,0 +1,9 @@
+*.png
+*.gif
+*.txt
+*.bat
+*.7z
+*.zip
+*.jar
+_old/
+*_base_timed.pde
