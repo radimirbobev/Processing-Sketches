@@ -66,10 +66,11 @@ void draw_() {
 	
 	float[] wave_times = new float[]{ 0.25, 0.5, 0.75 };
 	Wave( 0 );
-	if ( t < wave_times[0] ) Wave( -wave_duration*0.5f ); // "leftover" wave that starts halfway faded for proper looping
-	for ( int i=0; i<3; i++ ) {
+	// "leftover" wave that starts halfway faded for proper looping
+	if ( t < wave_times[0] )
+		Wave( -wave_duration*0.5f );
+	for ( int i=0; i<3; i++ )
 		if ( t > wave_times[i] ) Wave( wave_times[i] );
-	}
 
 	CirclePart( 0, 180, 20, 1.2 );
 	CirclePart( 255, 160, 25, 1 );
